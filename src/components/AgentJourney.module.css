@@ -1,0 +1,359 @@
+.section {
+  padding: 100px 0;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.introBlock {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.introTitle {
+  font-family: var(--font-sans);
+  font-size: 56px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.introSubtitle {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.journeyRow {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.reverseRow {
+  flex-direction: row-reverse;
+}
+
+.textSide {
+  flex: 1;
+  max-width: 480px;
+}
+
+.agentTag {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.agentTitle {
+  font-family: var(--font-sans);
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+
+.points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.points li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.points li strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.points li span {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.cardSide {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  height: 340px;
+  border-radius: var(--border-radius-large);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.03), 
+    0 1px 3px rgba(0,0,0,0.01),
+    inset 0 0 0 1px rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card Gradient Specifics */
+.blueCard {
+  background: var(--grad-blue-yellow);
+}
+
+.greenCard {
+  background: var(--grad-green);
+}
+
+.orangeCard {
+  background: var(--grad-orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Floating Pills base */
+.floatingPill {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+}
+
+/* Blue Card Pills Layout */
+.pillVisitor {
+  left: 10%;
+  top: 40%;
+  font-weight: 600;
+}
+
+.visitorAvatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sparkleIcon {
+  color: #d97706;
+}
+
+.pillCompany {
+  left: 20%;
+  bottom: 12%;
+}
+
+.pillArr {
+  right: 20%;
+  bottom: 16%;
+}
+
+.pillEmployees {
+  left: 15%;
+  top: 15%;
+}
+
+.pillProduct {
+  right: 10%;
+  top: 10%;
+}
+
+.pillGoal {
+  right: 8%;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid var(--color-text-primary);
+}
+
+/* Green Card Mockup elements */
+.pillLoader {
+  top: 15%;
+  left: 12%;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.loaderIcon {
+  animation: spin 2.5s linear infinite;
+  color: #059669;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.chatCardMock {
+  position: absolute;
+  bottom: 12%;
+  right: 10%;
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--border-radius-medium);
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.chatMockLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+}
+
+.chatMockBubble {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  background-color: #f3f4f6;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.4;
+  align-self: flex-start;
+}
+
+/* Orange Card Mockup elements */
+.chatCardMockOnboarding {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.onboardBubbleUser {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 14px;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  align-self: flex-start;
+  max-width: 85%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.onboardBubbleAgent {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 14px;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  align-self: flex-start;
+  max-width: 85%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.onboardInputBar {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 100px;
+  padding: 8px 8px 8px 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.onboardLogo {
+  color: var(--color-text-tertiary);
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.onboardPlaceholder {
+  flex: 1;
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+}
+
+.onboardSendBtn {
+  width: 22px;
+  height: 22px;
+  background-color: var(--color-brand-blue-accent);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .journeyRow {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .reverseRow {
+    flex-direction: column;
+  }
+  .textSide {
+    max-width: 100%;
+    text-align: center;
+  }
+  .points {
+    align-items: center;
+  }
+  .points li {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .introTitle {
+    font-size: 38px;
+  }
+  .agentTitle {
+    font-size: 30px;
+  }
+  .card {
+    height: 280px;
+  }
+  .chatCardMock {
+    width: 220px;
+    bottom: 8%;
+  }
+  .pillVisitor {
+    top: 30%;
+  }
+}
